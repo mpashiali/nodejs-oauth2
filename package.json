@@ -1,0 +1,33 @@
+{
+  "name": "auth-payment-gateway",
+  "version": "1.0.0",
+  "description": "FxPro Assignment",
+  "main": "server.js",
+  "scripts": {
+    "build": "npx babel src --out-dir dist",
+    "prod": "npx babel src --watch --out-dir dist",
+    "dev": "nodemon --exec babel-node src/server.js",
+    "test": "mocha test/*.js --require @babel/register --exit"
+  },
+  "author": "Marina Pashiali",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/node": "^7.12.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "joi": "^17.3.0",
+    "morgan": "^1.10.0",
+    "oauth2-server": "^3.1.1",
+    "uuid": "^8.3.1",
+    "uuidv1": "^1.6.14"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1",
+    "request": "^2.88.2"
+  }
+}
