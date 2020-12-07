@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "1dc938c7-bf47-405b-bb07-389e9d2b3752",
+		"name": "node-oauth2-server-payments-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/v1/authenticate",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"serious_business\",\r\n    \"password\": \"suchPassw0rdSecure\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/v1/payments",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b563dc4d76bc5b7b1c364b301c679766d1f846a7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payeeId\": \"id\",\r\n    \"payerId\": \"id\",\r\n    \"paymentSystem\": \"ingenico\",\r\n    \"paymentMethod\": \"visa\",\r\n    \"amount\": 32130,\r\n    \"currency\": \"USD\",\r\n    \"comment\": \"A comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/v1/payments",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b563dc4d76bc5b7b1c364b301c679766d1f846a7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payeeId\": \"id\",\r\n    \"payerId\": \"id\",\r\n    \"paymentSystem\": \"ingenico\",\r\n    \"paymentMethod\": \"visa\",\r\n    \"amount\": 10065.45,\r\n    \"currency\": \"USD\",\r\n    \"comment\": \"A comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/v1/payment/45d76240-367c-11eb-8c92-fc8ad0dacfa8",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 246770c7a183727334fa1178b6254b5c3111f7b7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payeeId\": \"id\",\r\n    \"payerId\": \"id\",\r\n    \"paymentSystem\": \"ingenico\",\r\n    \"paymentMethod\": \"visa\",\r\n    \"amount\": 10065.45,\r\n    \"currency\": \"USD\",\r\n    \"comment\": \"A comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/payment/45d76240-367c-11eb-8c92-fc8ad0dacfa8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"payment",
+						"45d76240-367c-11eb-8c92-fc8ad0dacfa8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/v1/payment/3b459840-36fb-11eb-8b7d-0e4ec57445be/approve",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1fe816a191dffde5e40113fa2d615b868c46c8b5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payeeId\": \"id\",\r\n    \"payerId\": \"id\",\r\n    \"paymentSystem\": \"ingenico\",\r\n    \"paymentMethod\": \"visa\",\r\n    \"amount\": 10065.45,\r\n    \"currency\": \"USD\",\r\n    \"comment\": \"A comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/payment/3b459840-36fb-11eb-8b7d-0e4ec57445be/approve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"payment",
+						"3b459840-36fb-11eb-8b7d-0e4ec57445be",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/v1/payment/7384db30-36fb-11eb-87bc-c206af01324d/cancel",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1fe816a191dffde5e40113fa2d615b868c46c8b5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payeeId\": \"id\",\r\n    \"payerId\": \"id\",\r\n    \"paymentSystem\": \"ingenico\",\r\n    \"paymentMethod\": \"visa\",\r\n    \"amount\": 10065.45,\r\n    \"currency\": \"USD\",\r\n    \"comment\": \"A comment\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/payment/7384db30-36fb-11eb-87bc-c206af01324d/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"payment",
+						"7384db30-36fb-11eb-87bc-c206af01324d",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

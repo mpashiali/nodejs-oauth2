@@ -1,6 +1,6 @@
 ## nodejs-oauth2-server
 
-This project implements a payments service with JSON API. APIs require authentication with bearer token. 
+Implementing a payments service with JSON API. APIs require authentication with bearer token. 
 https://tools.ietf.org/html/rfc6750#section-2.1
 
 
@@ -12,13 +12,22 @@ There are two main services: oauthService, paymentService.
 - Oauthservice, which gets a bearer token from oauth2-server and later authenticates it in order to proceed with the payment requests.
 - PaymentService which handles the payment related calls like making a payment, listing payments, approving and canceling.
 
+
 ## Start application
 
 Navigate in folder and execute:
+```
 npm install
 npm run dev
+```
 
-## API Methods
+## Run Unit test
+You can execute unit tests by executing at the main folder:
+```
+npm install
+npm run test
+```
+## APIs
 
 ### Authenticate
 
@@ -132,7 +141,7 @@ Response:
 ]
 ```
 
-### Get Specific Payment
+### Get a Specific Payment
  
 - Path: http://localhost:3000/v1/payments/3a7d3830-3748-11eb-80f9-56048e233566
 - Method: GET
@@ -155,3 +164,6 @@ Response:
 }
 ```
 
+### Postman collection
+
+You can use node-oauth2.postman_collection.json and import it to postman 
