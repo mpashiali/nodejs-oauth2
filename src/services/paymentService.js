@@ -1,4 +1,4 @@
-const paymentModel = require('../models/payment.model');
+const paymentModel = require('../models/paymentModel');
 const errorHandler = require('../models/errorModel');
 
 export async function createPayment(req, res) {

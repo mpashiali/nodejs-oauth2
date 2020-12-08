@@ -1,9 +1,9 @@
 const OAuth2Server = require('oauth2-server');
-const authModel = require('../models/auth.model');
+const authModel = require('../models/authModel');
 const errorHandler = require('../models/errorModel');
 
 var oauth = new OAuth2Server({
-  model: require('../models/auth.model'),
+  model: require('../models/authModel'),
   accessTokenLifetime: 4 * 60 * 60,
   allowBearerTokensInQueryString: true
 });

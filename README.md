@@ -167,3 +167,4 @@ Response:
 ### Postman collection
 
 You can use node-oauth2.postman_collection.json and import it to postman 
+You can run v1/authenticate request as it is, but for the rest of the calls, you will need to update the Bearer token in the headers section
